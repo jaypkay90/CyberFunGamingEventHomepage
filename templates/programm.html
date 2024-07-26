@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Programm
+{% endblock %}
+
+{% block main %}
+    <!--Text zum Programm-->
+    <h1 class="page-heading">Programm</h1>
+    <div class="img-grid-1x2 bg-color1">
+        <div class="centered-text-container">
+            <p>
+                Lust auf ein actiongeladenes Wochenende voller Gaming und Spaß bei unserer LAN-Party "Neckar Games"? 
+                Unser Programm bietet eine vielfältige Mischung aus Turnieren, Aktivitäten und Unterhaltung für alle 
+                Gaming-Enthusiasten!
+            </p>
+            <p>
+                Im Mittelpunkt des Events stehen drei Gaming-Turniere, bei denen ihr euch mit anderen Spielern messen könnt. 
+                <span class="bold-italic">Die Turnier-Games sind FC 24, Fortnite und Super Mario 64.</span>
+            </p>
+            <p>
+                Neben den Turnieren bieten wir eine breite Auswahl von <span class="bold-italic">über 100 Spielen für PC, PS5 und Nintendo Switch</span>, sodass 
+                für jeden Geschmack etwas dabei ist. Außerdem kannst du unsere <span class="bold-italic">Retro-Gaming-Area</span> mit alten Spielekonsolen und 
+                Spielen erkunden und so deine Jugend wieder zum Leben erwecken!
+            </p>
+        </div>
+        <div class="img-object-fit-cover-container change-order-sm padding-bottom-sm-0">
+            <img id="gamer-vr-pic" src="static/img/gamer-vr.png" alt="Bild von einer Person mit einem VR-Headset">
+        </div>
+    </div>
+
+    <!--Turnierübersicht-->
+    {% include "tournament.html" %}
+
+    <!--Terminplan-->
+    {% include "schedule.html" with context %}
+
+    <!--Ticketübersicht-->
+    <div class="ticket-grid-container bg-color4">
+        <h1 class="uppercase-h1">Tickets</h1>
+        <div class="ticket-grid">
+    
+            <!--Silver Pass-->
+            <img class="ticket-img" src="/static/img/silver-pass.png" alt="Bild des Silber-Tickets">
+            <h5 class="ticket-heading">Silver Pass</h5>
+            <ul class="ticket-features">
+                <li>Genieße das gesamte Programm</li>
+                <li>Spiele am PC, PS5 und Nintendo Switch</li>
+                <li>Spiele über 100 verschiedene Spiele</li>
+            </ul>
+            <h2 class="ticket-price">nur € 50</h2>
+    
+            <!--Gold Pass-->
+            <img class="ticket-img" src="/static/img/gold-pass.png" alt="Bild des Silber-Tickets">
+            <h5 class="ticket-heading">Gold Pass</h5>
+            <ul class="ticket-features">
+                <li>Genieße das gesamte Programm</li>
+                <li>Spiele am PC, PS5 und Nintendo Switch</li>
+                <li>Spiele über 100 verschiedene Spiele</li>
+                <li>Nimm an den Turnieren teil</li>
+                <li>Nutze die Retro-Gaming-Area</li>
+            </ul>
+            <h2 class="ticket-price">nur € 80</h2>
+    
+            <!--Group Gold Pass-->
+            <img class="ticket-img" src="/static/img/group-gold-pass.png" alt="Bild des Silber-Tickets">
+            <h5 class="ticket-heading">Group Gold Pass</h5>
+            <ul class="ticket-features">
+                <li>Genieße das gesamte Programm</li>
+                <li>Spiele am PC, PS5 und Nintendo Switch</li>
+                <li>Spiele über 100 verschiedene Spiele</li>
+                <li>Nimm an den Turnieren teil</li>
+                <li>Nutze die Retro-Gaming-Area</li>
+                <li>Erhalte 3 nebeneinander liegende Plätze in der Area</li>
+            </ul>
+            <h2 class="ticket-price">nur € 200</h2>
+    
+        </div>
+    </div>
+
+    <!--Informationen zum Ticketkauf-->
+    <div class="standard-content-block-container bg-color1" id="buy-ticket-info-container">
+        <h1 class="uppercase-h1">Informationen zum Ticketkauf</h1>
+        <div class="info-grid" id="buy-ticket-info">
+            <div id="fifty-seats-small">
+                <p>Es gibt nur...</p>
+                <p class="fifty-text">50</p>
+                <p>freie Plätze!</p>
+            </div>
+            <div class="centered-text-container change-order-sm" id="buy-ticket-info-text-container">
+                <p>Tickets können online über PayPal erworben werden. Bitte beachte dass die Teilnehmerzahl auf 50 Personen begrenzt ist. 
+                    Sollten am ersten Tag des Events noch Karten verfügbar sein, werden sie an der Kasse vor Ort erhältlich sein. In der 
+                    Vergangenheit waren unsere Events aber meistens innerhalb von wenigen Tagen ausverkauft. Melde dich daher am besten jetzt sofort an!
+                </p>
+            </div>
+        </div>
+        <a class="big-register-btn" href="/anmeldung">Anmelden</a>
+    </div>
+
+    <!--Weitere Information-->
+    <div class="standard-content-block-container bg-color4" id="weitere-infos-container">
+        <h1 class="uppercase-h1">Weitere Informationen</h1>
+        <div class="weitere-infos-grid">
+            <div id="ort" class="centered-text-container">
+                <h3 class="uppercase-h3">Ort</h3>
+                <p>
+                    Münzenbachhalle</br>
+                    Alter Postweg 20</br>
+                    69151 Neckargemünd
+                </p>
+            </div>
+            <div id="anreise" class="centered-text-container">
+                <h3 class="uppercase-h3">Anreise und Parken</h3>
+                <p>
+                    Es stehen 25 freie Parkplätze direkt an der Münzenbachhalle zur Verfügung. 
+                    Alternativ empfehlen wir die Nutzung öffentlicher Verkehrsmittel oder Fahrgemeinschaften, um die 
+                    Parkplatzsituation zu entlasten.
+                </p>
+            </div>
+            <div id="logistik">
+                <h3 class="uppercase-h3">Logistik</h3>
+                <ul id="logistik-features">
+                    <li>Für das leibliche Wohl ist gesorgt! Es wird ein vielfältiges Angebot an Speisen und Getränken vor Ort geben.</li>
+                    <li>Es werden ausreichend Sitzgelegenheiten bereitgestellt, damit Sie sich während Ihrer Gaming-Sessions entspannen können.</li>
+                    <li>Kostenloses WLAN steht allen Teilnehmern während der gesamten Veranstaltung zur Verfügung.</li>
+                    <li>Die Sicherheit aller Teilnehmer hat oberste Priorität. Es stehen Notfallteams bereit, um im Bedarfsfall sofortige Hilfe zu leisten.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

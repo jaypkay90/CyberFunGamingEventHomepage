@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block main %}
+    <!--Veranstaltungs-Banner-->
+    <div class="banner-card">
+        <img src="static/img/gamepad-green-bg.png" alt="Bild von einem Gamepad">
+            <div class="gamepad-banner-text">Neckar Games</div>
+            <div class="gamepad-banner-text-bottom">Das größte Gaming-Event am Neckar</div>
+    </div>
+
+    <!--CTA-Banner-->
+    <div class="banner-card">
+        <img src="static/img/gamers-Pic01.png" alt="Bild von Gamern, die gemeinsam am Computer spielen">
+            <a class="big-register-btn text-img-center" href="/anmeldung">Anmelden</a>
+    </div>
+
+    <!--Allgemeine Event-Infos-->
+    <div class="img-grid-1x2 bg-color3 event-info-grid">
+        <div class="grid-3x1">
+            <div class="who-when-where-grid-item">
+                <h1>Wo?</h1>
+                <h4>Sporthalle Neckargemünd</h4>
+                <p>Wir verwandeln die Münzenbachhalle in Neckargemünd in ein Gaming-Paradies!</p>
+            </div>
+            <div class="who-when-where-grid-item">
+                <h1>Wann?</h1>
+                <h4>Freitag, 19. Jul - Sonntag, 21. Jul 2024</h4>
+                <p>Halte dir das dritte Juli-Wochenende frei und erlebe das größte Gaming-Spektakel deines Lebens.</p>
+            </div>
+            <div class="who-when-where-grid-item">
+                <h1>Wer?</h1>
+                <h4>Nur 50 Plätze frei!</h4>
+                <p>Wer zuerst kommt, malt zuert! Melde dich jetzt an!</p>
+            </div>
+        </div>
+        <div>
+            <img id="gamers-grid-pic-01" src="static/img/gamers-Pic02.png" alt="Bild von Gamern, die gemeinsam am Computer spielen">
+        </div>
+    </div>
+
+    <!--Turnierübersicht-->
+    {% include "tournament.html" %}
+
+    <!--Nur 50 Plätze CTA-->
+    <div id="fifty-seats" class="bg-color3">
+        <p>Es gibt nur...</p>
+        <p class="fifty-text">50</p>
+        <p>freie Plätze!</p>
+        <a class="big-register-btn" href="/anmeldung">Anmelden</a>
+    </div>
+
+    <!--Terminplan-->
+    {% include "schedule.html" with context %}
+
+    <!--Game over Text-->
+    <div class="game-over-container">
+        <div id="game-over-text-top">Game over!</div>
+        <div id="game-over-text-bottom" aria-hidden="true">Game over!</div>
+    </div>
+    
+{% endblock %}

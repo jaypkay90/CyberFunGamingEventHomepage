@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Spiele
+{% endblock %}
+
+{% block main %}
+    <!--Text zu den Spielen-->
+    <h1 class="page-heading">Spiele</h1>
+    <div class="img-grid-1x2 bg-color1">
+        <div class="centered-text-container">
+            <p>
+                Im Mittelpunkt des Events stehen drei Gaming-Turniere, bei denen ihr euch mit anderen Spielern messen könnt. 
+                <span class="bold-italic">Die Turnier-Games sind FC 24, Fortnite und Super Mario 64.</span>
+            </p>
+            <p>
+                Neben den Turnieren bieten wir eine breite Auswahl von <span class="bold-italic">über 100 Spielen für PC, PS5 und Nintendo Switch</span>, sodass 
+                für jeden Geschmack etwas dabei ist. Außerdem kannst du unsere <span class="bold-italic">Retro-Gaming-Area</span> mit alten Spielekonsolen und 
+                Spielen erkunden und so deine Jugend wieder zum Leben erwecken!
+            </p>
+        </div>
+        <div class="img-object-fit-cover-container change-order-sm padding-bottom-sm-0">
+            <img id="gamer-pc-pic" src="static/img/gamer-pc.png" alt="Bild von einer Person, die an einem Computer spielt.">
+        </div>
+    </div>
+
+    <!--Turnierübersicht-->
+    {% include "tournament.html" %}
+
+    <!--Spieleübersicht-->
+    <div class="ticket-grid-container">
+        <h1 class="uppercase-h1">Spiele</h1>
+        <div class="ticket-grid games-grid">
+            <h5 class="ticket-heading">PS5</h3>
+            <ul class="ticket-features">
+                <li>Spider-Man: Miles Morales</li>
+                <li>Demon’s Souls</li>
+                <li>Ratchet & Clank: Rift Apart</li>
+                <li>Returnal</li>
+                <li>Resident Evil Village</li>
+                <li>u.v.m.</li>
+            </ul>
+            <h5 class="ticket-heading">Nintendo Switch</h3>
+            <ul class="ticket-features">
+                <li>The Legend of Zelda: Breath of the Wild</li>
+                <li>Animal Crossing: New Horizons</li>
+                <li>Super Mario Odyssey</li>
+                <li>Mario Kart 8 Deluxe</li>
+                <li>Pokémon Sword and Shield</li>
+                <li>u.v.m.</li>
+            </ul>
+            <h5 class="ticket-heading">XBOX Series X</h3>
+            <ul class="ticket-features">
+                <li>Halo Infinite</li>
+                <li>Forza Horizon 5</li>
+                <li>Gears 5</li>
+                <li>Assassin's Creed Valhalla</li>
+                <li>Madden NFL 2024</li>
+                <li>u.v.m.</li>
+            </ul>
+        </div>
+
+        <!--Retro-Gaming-Area-Hint-->
+        <h3 class="uppercase-h3 retro-gaming-area-hint">+ über 50 Spieleklassiker von A bis Z in unserer
+            Retro-Gaming-Area</h3>
+    </div>
+
+    
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Kontakt
+{% endblock %}
+
+{% block main %}
+    <h1 class="page-heading">Kontakt</h1>
+    <div class="centered-text-container">
+        <p class="kontakt-text">
+            Du hast noch Fragen? So kannst du mit uns in Kontakt treten:
+        </p>
+    </div>
+
+    <!--Kontakt-Daten-->
+    <div class="kontakt-grid">
+        <div class="kontakt-item">
+            <img src="/static/img/contact-icons/mail-icon.png">
+            <p><a class="mailTel-link" href="mailto:info@cyber-fun.de">info@cyber-fun.de</a></p>
+        </div>
+        <div class="kontakt-item">
+            <img src="/static/img/contact-icons/phone-icon.png">
+            <p><a class="mailTel-link" href="tel:+49622363451">+496223/63451</a></p>
+        </div>
+        <div class="kontakt-item">
+            <img src="/static/img/contact-icons/address-icon.png">
+            <p>
+                Cyber-Fun Hinz & Özgür GmbH<br>
+                Bahnhofstr. 23<br>
+                69151 Neckargemünd
+            </p>
+        </div>
+    </div>
+{% endblock %}

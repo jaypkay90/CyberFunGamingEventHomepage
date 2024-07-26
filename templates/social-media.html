@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block JS %}
+    <script src="{{ url_for('static', filename='social-media.js') }}"></script>
+{% endblock %}
+
+{% block title %}
+	Social Media
+{% endblock %}
+
+{% block main %}
+<h1 class="page-heading">Social Media</h1>
+<div class="centered-text-container">
+    <p>
+        Du willst auf dem Laufenden bleiben und mehr über Neckar Games und weitere Events von uns erfahren? 
+        Dann folge uns auf <span class="bold-italic">Social Media</span>. Hier gibt es gegelmäßige Updates!
+    </p>
+</div>
+
+<div class="so-me-grid">
+    <a class="so-me-link" href="https://www.instagram.com/" target="_blank">
+        <img src="/static/img/some/instagram-500.png" alt="Instagram Logo">
+    </a>
+    <a class="so-me-link" href="https://www.facebook.com/" target="_blank">
+        <img src="/static/img/some/facebook-500.png" alt="Facebook Logo">
+    </a>
+    <a class="so-me-link" href="https://www.tiktok.com/" target="_blank">
+        <img src="/static/img/some/tiktok-500.png" alt="TikTok Logo">
+    </a>
+    <a class="so-me-link" href="https://www.x.com/" target="_blank">
+        <img src="/static/img/some/twitterx-500.png" alt="Twitter/X Logo">
+    </a>
+</div>
+
+{% endblock %}

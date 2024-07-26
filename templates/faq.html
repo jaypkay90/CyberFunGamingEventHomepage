@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	FAQ
+{% endblock %}
+
+{% block main %}
+<h1 class="page-heading">FAQ</h1>
+<div class="container">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Wie melde ich mich für Neckar-Games an?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Die Registrierung erfolgt ganz einfach über unsere Website. Klicke unten auf den Anmelde-Link oder auf den Anmelde-Button oben rechts auf dieser Seite, um dir deine Teilnahme am Event zu sichern. 
+                <a href="{{ url_for('anmeldung') }}" style="display: block;">Hier geht’s zur Anmeldung.</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Gibt es eine Altersbeschränkung?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Ja, das Event ist ab 16 Jahren zugänglich. Teilnehmer unter 18 Jahren benötigen jedoch die Zustimmung eines Erziehungsberechtigten.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Muss ich mein Gaming-Equipment mitbringen?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Nein, alles Notwendige für eine Gaming-Wochenende der Extraklasse haben wir hier. Wenn du dein eigenes Headset oder deine eigene Tastatur/Maus mitbringen möchtest, kannst du das tun, aber es ist nicht notwendig.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                Gibt es Übernachtungsmöglichkeiten vor Ort?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Ja, wir empfehlen eine Unterkunft in Neckargemünd selbst oder in der Stadt Heidelberg, die nur wenige Kilometer vom Veranstaltungsort entfernt ist.
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                Gibt es am Veranstaltungsort WLAN?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Ja, kostenloses WLAN steht allen Teilnehmern während des gesamten Events zur Verfügung.
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                Kann man Tickets auch vor Ort kaufen?
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Die Teilnehmerzahl ist begrenzt, daher empfehlen wir dringend, Tickets im Voraus online zu kaufen. Sollten jedoch noch Plätze verfügbar sein, können Tickets auch am ersten Eventtag an der Kasse erworben werden.
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Kontakt-->
+    <h3 class="uppercase-h3">Noch Fragen? Kontaktiere uns!</h3>
+    <a class="big-register-btn kontakt-btn" href="/kontakt">Kontakt</a>
+</div>
+{% endblock %}

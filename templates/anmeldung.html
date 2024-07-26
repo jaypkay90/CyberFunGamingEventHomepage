@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block JS %}
+    <script src="{{ url_for('static', filename='anmeldung.js') }}"></script>
+{% endblock %}
+
+{% block title %}
+	Anmeldung
+{% endblock %}
+
+{% block main %}
+<h1 class="page-heading">Anmeldung</h1>
+<div class="container-fluid anmeldung-page">
+        <p class="worksans text-center text-white">Fülle zur Anmeldung für Neckar Games bitte das Formular auf dieser Seite
+            vollstädnig aus.
+        </p>
+
+        {% if errorFields %}
+        <script>
+            const errorFields = {{ errorFields | tojson | safe }};
+        </script>
+        {% else %}
+        <script>
+            const errorFields = [];
+        </script>
+        {% endif %}
+        
+        <p id="error-message">Bitte prüfe deine Angaben!</p>
+
+        <!--Anmeldeformular-->
+        <form id="anmeldung-form" action="/anmeldung" method="POST" novalidate>
+            <fieldset>
+                <legend class="uppercase-h3 fieldset-heading">Persönliche Daten</legend>
+                <div class="personal-data-container">
+                    <div class="personal-data-input-container">
+                        <label for="vorname">Vorname*</label>
+                        <input type="text" id="vorname" name="vorname" pattern="^[A-Za-zäöüÄÖÜ]+[A-Za-zäöüÄÖÜ \-]+$" required value="{{ request.form['vorname'] }}" placeholder="Max" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="nachname">Nachname*</label>
+                        <input type="text" id="nachname" name="nachname" pattern="^[A-Za-zäöüÄÖÜ]+[A-Za-zäöüÄÖÜ\s\-]+$" required value="{{ request.form['nachname'] }}" placeholder="Mustermann" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="plz">PLZ*</label>
+                        <input type="text" id="plz" name="plz" pattern="^[0-9]{5}$" required value="{{ request.form['plz'] }}" pattern="[0-9]{5}" placeholder="12345" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="ort">Ort*</label>
+                        <input type="text" id="ort" name="ort" pattern="^[A-Za-zäöüÄÖÜ]+[A-Za-zäöüÄÖÜ \-]+$" required value="{{ request.form['ort'] }}" placeholder="Musterstadt" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="stasse">Straße*</label>
+                        <input type="text" id="strasse" name="strasse" pattern="^[A-Za-zäöüÄÖÜ]+[A-Za-zäöüÄÖÜ \-.]+$" required value="{{ request.form['strasse'] }}" placeholder="Musterstr." spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="hausnummer">Hausnummer*</label>
+                        <input type="text" id="hausnummer" name="hausnummer" pattern="^[0-9]+ ?[A-Za-z]?$" required value="{{ request.form['hausnummer'] }}" placeholder="15a" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="mail">E-Mail*</label>
+                        <input type="email" id="mail" name="mail" required value="{{ request.form['mail'] }}" placeholder="m.mustermann@mail.de" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="telefon">Telefon*</label>
+                        <input type="tel" id="telefon" name="telefon" pattern="^\+?[0-9][0-9\s\-]+$" required value="{{ request.form['telefon'] }}" placeholder="+4912345678" spellcheck="false">
+                    </div>
+                    <div class="personal-data-input-container">
+                        <label for="altersgruppe">Altersgruppe</label>
+                        <select id="altersgruppe" name="altersgruppe" name="altersgruppe" required>
+                            <option value="16 - 30" {% if request.form.get('altersgruppe') == '16 - 30' %} selected {% endif %}>16 - 30</option>
+                            <option value="30 - 45" {% if request.form.get('altersgruppe') == '30 - 45' %} selected {% endif %}>30 - 45</option>
+                            <option value="45+" {% if request.form.get('altersgruppe') == '45+' %} selected {% endif %}>45+</option>
+                            <option value="Keine Angabe" {% if request.form.get('altersgruppe') == 'Keine Angabe' %} selected {% endif %}>Keine Angabe</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="uppercase-h3 fieldset-heading">Ticketauswahl</legend>
+                <div class="anmeldung-select-container">
+                    <select id="ticket-select" name="ticket-select" required>
+                        <option value="silverPass" {% if request.form.get('ticket-select') == 'silverPass' %} selected {% endif %}>Silver Pass</option>
+                        <option value="goldPass" {% if request.form.get('ticket-select') == 'goldPass' %} selected {% endif %}>Gold Pass</option>
+                        <option value="groupGoldPass" {% if request.form.get('ticket-select') == 'groupGoldPass' %} selected {% endif %}>Group Gold Pass</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset id="turnier-select-fieldset">
+                <legend class="uppercase-h3 fieldset-heading">Turnieranmeldung</legend>
+                <div class="anmeldung-select-container">
+                    <select id="turnier-select" name="turnier-select" required>
+                        <option value="FC 24" {% if request.form.get('turnier-select') == 'FC 24' %} selected {% endif %}>FC 24</option>
+                        <option value="Fortnite" {% if request.form.get('turnier-select') == 'Fortnite' %} selected {% endif %}>Fortnite</option>
+                        <option value="Super Mario 64"  {% if request.form.get('turnier-select') == 'Super Mario 64' %} selected {% endif %}>Super Mario 64</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="uppercase-h3 fieldset-heading">Zahlung</legend>
+                <div id="ticket-price-tag">nur € 50</div>
+                <div class="ticket-payment-info-container">
+                    <div class="paypal-graphic-container">
+                        <img src="static/img/paypal-pic.png" alt="PayPal-Logo">
+                    </div>
+                    <div class="ticket-payment-info-text">
+                        <p>Die Zahlung ist bei Vorbestellung über 
+                            dieses Formular nur via PayPal möglich.
+                        </p>
+                        <p>
+                            Nach Absenden des Formulars erhältst du eine E-Mail mit deiner Buchungsnummer.
+                        </p>
+                        <p>
+                            Bitte sende uns den fälligen Betrag an die in der E-Mail angegebene PayPal-Adresse. 
+                            Wir senden dir dann innerhalb von 48 Stunden dein Ticket zu!
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="uppercase-h3 fieldset-heading">Newsletter</legend>
+                <div class="newsletter-info-container">
+                    <p><span>Wichtiger Hinweis:</span> Diese Webseite dient nur der allgemeinen Information. 
+                        Um mehr über Neckar Games und weitere Events von uns zu erfahren, empfehlen wir 
+                        dir, uns auf Social Media zu folgen und unseren Newsletter zu abonnieren!
+                    </p>
+                    <div class="newsletter-check-container">
+                        <input type="checkbox" name="newsletter" {% if request.form.get('newsletter') %} checked {% endif %}>
+                        <p>Ja, ich möchte mich für den Newsletter anmelden, um weitere Informationen zu erhalten 
+                            und auf dem Laufenden zu bleiben.</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <input type="submit" class="big-register-btn registration-submit" value="Absenden">
+        </form>
+    </div>
+{% endblock %}

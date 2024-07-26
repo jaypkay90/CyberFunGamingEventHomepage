@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block JS %}
+    <script src="{{ url_for('static', filename='vergangene-events.js') }}"></script>
+{% endblock %}
+
+{% block title %}
+	Vergangene Events
+{% endblock %}
+
+{% block main %}
+    <h1 class="page-heading">Vergangene Events</h1>
+    <div class="container-fluid bg-color1">
+
+        <!--Text-->
+        <div class="centered-text-container">
+            <p>
+                Wir sind stolz darauf, in der Vergangenheit eine Reihe spektakulärer Gaming-Events veranstaltet zu haben, die die Grenzen des 
+                Gaming-Erlebnisses neu definiert haben. Von epischen Gaming-Turnieren bis hin zu ausgelassenen LAN-Parties mit über 100 
+                Teilnehmern - wir haben alles erlebt und sind bereit für mehr! Hier gibt’s ein paar Eindrücke von Events, die wir abgehalten 
+                haben.
+            </p>
+        </div>
+
+        <!--Image Grid-->
+        <div class="container gallery-grid">
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamers-Pic01.png" alt="Bild von Personen, die gemeinsam an Computern spielen.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamers-Pic06.png" alt="Bild von zwei Personen, die gemeinsam an Computern spielen.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamers-Pic05.png" alt="Bild von zwei Personen, die gemeinsam Spaß mit VR-Headsets haben.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamer-pc04.png" alt="Bild von einer jungen Dame, die am Computer spielt und sich freut.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamers-Pic02.png" alt="Bild von Personen, die gemeinsam an Computern spielen.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamers-Pic04.png" alt="Bild von Personen, die gemeinsam an einer Konsole spielen und Spaß haben.">
+            </div>
+            <div class="gallery-img-container">                
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamer-pc03.png" alt="Bild von einem jungen Mann, der am Coputer spielt.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamer-pc02.png" alt="Bild von einer jungen Dame, die am Computer spielt.">
+            </div>
+            <div class="gallery-img-container">
+                <img class="gallery-img" id="gallery-pic01" src="/static/img/gamer-pc.png" alt="Bild von einem jungen Mann, der am Coputer spielt und sich feiert.">
+            </div>
+        </div>
+
+        <!--Lightbox-->
+        <div id="lightbox">
+            <div class="lightbox-content">
+                <img id="lightbox-img">
+                <button id="lightbox-close">x</button>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

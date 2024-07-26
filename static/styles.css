@@ -1,0 +1,1301 @@
+:root {
+    --color1: #0376a9;
+    --color2: #0093E9;
+    --color3: #473dc6;
+    --color4: #1b1e54;
+
+    --font-family1: "Work Sans", sans-serif;
+    --font-family2: "Roboto", sans-serif;
+    --font-family3: sans-serif;
+
+    --font-size-s: 1.00rem;
+    --font-size-m: 1.50rem;
+    --font-size-l: 2.00rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.worksans {
+    font-family: var(--font-family1);
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-l);
+}
+
+h4, h5 {
+    font-size: var(--font-size-m);
+}
+
+.bg-color1 {
+    background-color: var(--color1);
+}
+
+.bg-color3 {
+    background-color: var(--color3);
+}
+
+.bg-color4 {
+    background-color: var(--color4);
+}
+
+.font-size-xxl {
+    font-size: var(--font-size-xxl);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 80px;
+    min-height: 100vh;
+}
+
+.navbar {
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+}
+
+.navbar-logo {
+    max-height: 55px;
+    width: auto;
+}
+
+#nav-register-btn {
+    background-color: #923f34;
+    color: white;
+    border-radius: 20px;
+    border: 5px solid white;
+    margin: 0 0.3rem;
+    font-family: var(--font-family2);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 150px;
+}
+
+#nav-register-btn:hover {
+    background-color: white;
+    border-color: #923f34;
+    color: #923f34;
+}
+
+.navbar-nav {
+    border-radius: 0%;
+    background-color: var(--color1);
+    font-size: var(--font-size-s);
+}
+
+.dropdown-menu {
+    border-color: rgba(0,0,0,.2);
+    box-shadow: 6px 6px 6px 0 rgba(0,0,0,.2);
+    border-radius: 10px;
+    background-color: var(--color1);
+    font-size: var(--font-size-s);
+}
+
+.dropdown-menu > li > a {
+    color: white;
+    font-family: var(--font-family1);
+    font-weight: 600;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: var(--color1);
+    color: black;
+}
+
+.navbar {
+    background-color: var(--color1);
+    height: 80px;
+}
+
+.nav-link  {
+    color: white;
+    font-family: var(--font-family1);
+    font-weight: 600;
+}
+
+.navbar-nav {
+    background-color: var(--color1);
+}
+
+.nav-item > a:hover {
+    color: black;
+}
+
+.footer-container {
+    background-color: var(--color1);
+    box-shadow: 0 0 4px 4px rgba(0,0,0,.2);
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "links logo"
+        "copyright copyright"
+    ;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    text-align: center;
+    padding: 1.5rem 0 1.5rem 0;
+    overflow: hidden;
+    font-size: var(--font-size-s);
+}
+
+#footer-grid-links {
+    grid-area: links;
+}
+
+#footer-grid-logo {
+    grid-area: logo;
+}
+
+#footer-grid-copyright {
+    grid-area: copyright;
+    color: white;
+    font-family: var(--font-family1);
+    font-weight: 600;
+}
+
+footer {
+    gap: 1rem;
+}
+
+.footer-logo-link {
+    width: 7rem;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.footer-logo-link > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.two-col-ul {
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.two-col-ul > li {
+    padding: 5px;
+}
+
+
+
+
+/* INDEX.HTML */
+
+.banner-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-card > img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center 60%;
+}
+
+.gamepad-banner-text {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-family3);
+    color: white;
+    font-size: clamp(4rem, 1rem + 15vw, 10rem);
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.gamepad-banner-text-bottom {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-family2);
+    color: white;
+    font-size: clamp(1.25rem, 1rem + 2vw, 8rem);
+    font-weight: 800;
+    text-align: center;
+    font-style: italic;
+    line-height: 1;
+    width: 85%;
+    text-shadow: #000000 1px 0 20px;
+}
+
+.banner-card:nth-of-type(2) > img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: 25% top;
+}
+
+.text-img-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.big-register-btn {
+    background-color: #923f34;
+    color: white;
+    border-radius: 20px;
+    border: 8px solid white;
+    margin: 0 0.3rem;
+    font-family: var(--font-family2);
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 260px;
+    text-decoration: none;
+}
+
+.big-register-btn:hover {
+    background-color: white;
+    border-color: #923f34;
+    color: #923f34;
+}
+
+.img-grid-1x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    overflow: hidden;
+    /*min-height: 90vh;*/
+}
+
+.img-grid-1x2 > * {
+    order: 1;
+}
+
+.img-grid-1x2 > div:last-of-type {
+    display: flex;
+    place-content: center;
+}
+
+#gamers-grid-pic-01 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 45% center;
+}
+
+.grid-3x1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.who-when-where-grid-item > h1 {
+    font-family: var(--font-family3);
+    font-weight: 800;
+}
+
+.who-when-where-grid-item > h4 {
+    font-family: var(--font-family3);
+}
+
+.who-when-where-grid-item > p {
+    font-family: var(--font-family1);
+    font-size: var(--font-size-s);
+}
+
+#gamepad-grid-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% center;
+}
+
+.tournament-grid > div {
+    order: 1;
+}
+
+.tournament-grid > div > h1 {
+    text-align: center;
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+    font-family: var(--font-family1);
+    text-shadow: #000000 1px 0 20px;
+}
+
+.tournament-grid > div:last-of-type {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#fifty-seats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+#fifty-seats > p {
+    font-family: var(--font-family3);
+    font-size: var(--font-size-xxl);
+    line-height: 1;
+}
+
+#fifty-seats > .fifty-text {
+    font-size: clamp(10rem, 1rem + 20vw, 15rem);
+    font-style: italic;
+    text-shadow: #000000 1px 0 20px;
+}
+
+#fifty-seats > a {
+    margin: auto;
+}
+
+.grid-1x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.schedule-grid-container {
+    min-height: 90vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.uppercase-h1 {
+    font-family: var(--font-family3);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    word-break: break-word;
+    color: white;
+    overflow: hidden;
+    margin-bottom: clamp(1.5rem, 1rem + 2vw, var(--font-size-xxl));
+    font-size: clamp(1.5rem, 1rem + 2vw, var(--font-size-xxl));
+}
+
+.uppercase-h3 {
+    font-family: var(--font-family3);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    word-break: break-word;
+    color: white;
+    overflow: hidden;
+    margin-bottom: clamp(1rem, 1rem + 1vw, var(--font-size-l));
+    font-size: clamp(1rem, 1rem + 1vw, var(--font-size-l));
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-grid-item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: var(--font-family1);
+}
+
+.schedule-grid-headings > h5 {
+    font-family: var(--font-family3);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.schedule-grid-headings > h1 {
+    font-family: var(--font-family3);
+    font-weight: 600;
+}
+
+.schedule-grid-item-event {
+    border-bottom: 1px solid white;
+    font-size: var(--font-size-s);
+}
+
+.schedule-grid-item-event > div:last-of-type {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.game-over-container {
+    display: grid;
+    place-content: center;
+    background-color: var(--color3);
+    min-height: 90vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 15vw, 13rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    padding: 1.5rem;
+}
+
+.game-over-container > div {
+    grid-area: 1/1/-1/-1;
+}
+
+#game-over-text-top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+    text-align: center;
+}
+
+#game-over-text-bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, var(--color4) 53%, white 65%);
+    background: linear-gradient(177deg, var(--color4) 53%, white 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+    text-align: center;
+}
+
+
+/* PROGRAMM.HTML */
+
+.page-heading {
+    padding: 2rem;
+    font-family: var(--font-family3);
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+    background-color: var(--color1);
+    text-shadow: #000000 1px 0 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.img-object-fit-cover-container {
+    max-width: 100%;
+    padding: 2rem;
+}
+
+#gamer-vr-pic {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.centered-text-container {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    place-content: center;
+    color: white;
+}
+
+.centered-text-container > p {
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-family1);
+    font-size: var(--font-size-s);
+}
+
+.bold-italic {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.ticket-grid-container {
+    display: grid;
+    place-content: center;
+    min-height: 90vh;
+    padding: 1.5rem;
+}
+
+.ticket-grid {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column;
+    gap: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-family3);
+}
+
+.ticket-img {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.ticket-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ticket-features {
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.ticket-price {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-shadow: #ffffff 1px 0 20px;
+}
+
+.standard-content-block-container {
+    min-height: 90vh;
+    padding: 1.5rem;
+    place-content: center;
+    display: grid;
+}
+
+#buy-ticket-info-container {
+    overflow: hidden;
+}
+
+#buy-ticket-info-text-container {
+    padding: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+#buy-ticket-info > * {
+    order: 1;
+}
+
+#fifty-seats-small {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#fifty-seats-small > p {
+    font-family: var(--font-family3);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    margin: 0;
+}
+
+#fifty-seats-small > .fifty-text {
+    font-size: clamp(10rem, 1rem + 20vw, 15rem);
+    font-style: italic;
+    text-shadow: #000000 1px 0 20px;
+}
+
+#buy-ticket-info-container > a {
+    place-self: center;
+    margin-top: 1.5rem;
+}
+
+.weitere-infos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "ort logistik"
+        "anreise logistik";
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin-top: 1.5rem;
+}
+
+.weitere-infos-grid p {
+    padding: 0;
+}
+
+.weitere-infos-grid > .centered-text-container {
+    padding: 0;
+    justify-content: center;
+    align-content: start;
+    gap: 0;
+}
+
+#ort {
+    grid-area: ort;
+}
+
+#anreise {
+    grid-area: anreise;
+}
+
+#logistik {
+    grid-area: logistik;
+}
+
+#logistik-features {
+    word-break: break-word;
+    color: white;
+}
+
+
+/* ANMELDUNG.HTML */
+
+.anmeldung-page {
+    padding: 1.5rem
+}
+
+#error-message {
+    margin: 3rem auto 0 auto;
+    font-size: var(--font-size-m);
+    font-weight: bold;
+    color: red;
+    background-color: white;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 4px solid red;
+    text-align: center;
+    display: none;
+}
+
+.personal-data-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.personal-data-input-container > * {
+    display: block;
+}
+
+.fieldset-heading {
+    margin-top: 3rem;
+}
+
+#anmeldung-form, fieldset {
+    overflow: hidden;
+}
+
+fieldset label {
+    font-family: var(--font-family3);
+    color: white;
+    font-weight: 600;
+}
+
+fieldset input, select {
+    border: 1px solid white;
+    border-radius: 4px;
+    font-family: var(--font-family1);
+}
+
+.border-error {
+    border: 4px solid red;
+
+}
+
+.anmeldung-select-container {
+    max-width: 1000px;
+    display: grid;
+    justify-content: center;
+    margin: auto;
+}
+
+::placeholder {
+    font-family: var(--font-family1);
+    color: #6F6A74;
+    font-size: 0.75rem;
+}
+
+#anmeldung-form > fieldset {
+    margin-bottom: 1.5rem;
+}
+
+#turnier-select-fieldset {
+    display: none;
+}
+
+.newsletter-info-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.newsletter-info-container span {
+    text-decoration: underline;
+}
+
+.newsletter-check-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter-info-container p {
+    font-family: var(--font-family1);
+    color: white;
+}
+
+.ticket-payment-info-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1.5rem;
+    overflow: hidden;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#ticket-price-tag {
+    background-color: #923f34;
+    color: white;
+    border-color: transparent;
+    border-radius: 60px;
+    margin: 0 auto 2rem auto;
+    font-family: var(--font-family3);
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    width: 200px;
+    font-style: italic;
+}
+
+.paypal-graphic-container {
+    width: 200px;
+    display: grid;
+    align-items: center;
+}
+
+.paypal-graphic-container > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ticket-payment-info-text {
+    color: white;
+    font-family: var(--font-family1);
+    align-self: center;
+}
+
+.registration-submit {
+    display: block;
+    margin: 3rem auto 3rem auto;
+}
+
+
+/* BESTELLUNG-ERFOLGREICH.html */
+
+.order-success-container {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color3);
+    display: grid;
+    place-content: center;
+}
+
+.order-success-container > p {
+    color: white;
+    text-align: center;
+}
+
+
+/* IMPRESSUM.HTML */
+
+.impressum-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+    overflow: hidden;
+}
+
+.impressum-container div {
+    text-align: center;
+    color: white;
+    font-family: var(--font-family1);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+
+/* SOCIAL-MEDIA.HTML */
+
+.so-me-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 1rem;
+    place-content: center;
+}
+
+.so-me-link {
+    display: block;
+}
+
+.so-me-link > img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* SPIELE.HTML */
+
+#gamer-pc-pic {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.games-grid {
+    grid-template-rows: repeat(2, auto);
+}
+
+.retro-gaming-area-hint {
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* FAQ.HTML */
+
+#accordionExample {
+    margin-bottom: 2rem;
+}
+
+.accordion-button {
+    font-family: var(--font-family3);
+    background-color: var(--color3);
+    color: white;
+    overflow: hidden;
+}
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+
+.accordion-body {
+    font-family: var(--font-family1);
+}
+
+.kontakt-btn {
+    display: block;
+    margin: auto auto 3rem auto;
+    overflow: hidden;
+}
+
+.container {
+    overflow: hidden;
+}
+
+/* KONTAKT.HTML */
+
+.kontakt-text {
+    font-size: var(--font-size-m) !important;
+}
+
+.kontakt-grid {
+    display: grid;
+    max-width: 1000px;
+    padding: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: column;
+    gap: 3rem;
+    margin: auto;
+    place-content: center;
+    padding-bottom: 3rem;
+}
+
+.kontakt-item  {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 250px);
+    gap: 10px;
+    place-content: center;
+    margin: auto;
+}
+
+.kontakt-item > img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.kontakt-item > p {
+    color: white;
+    font-family: var(--font-family1);
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    margin: 0;
+}
+
+.kontakt-grid > div:last-of-type {
+    grid-row: span 2;
+}
+
+.mailTel-link {
+    color: white;
+}
+
+.mailTel-link:hover {
+    color: black;
+}
+
+
+/* ÜBER-UNS.HTML */
+
+.img-object-fit-contain-container {
+    max-width: 100%;
+    padding: 2rem;
+    margin: auto;
+}
+
+#cf-team-pic {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+#ueber-uns-gamers-pic-container {
+    order: 0;
+}
+
+#gamers-Pic03 {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* VERGANGENE EVENTS.HTML */
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 3rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-img-container {
+    width: 100%;
+    padding-bottom: 100%; /* Sets the height to match the width */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+}
+
+.gallery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img-container:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+#lightbox {
+    display: none;
+    align-items: center;
+    justify-content: center !important;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    z-index: 1100;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.lightbox-content {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    position: relative;
+}
+
+#lightbox-img {
+    width: 100%;
+    height: auto;
+}
+
+#lightbox-close {
+    background-color: #923f34;
+    line-height: 1;
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .page-heading {
+        font-size: var(--font-size-xl)
+    }
+
+    .footer-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "links"
+            "logo"
+            "copyright"
+        ;
+    }
+
+    .banner-card > img {
+        height: 350px;
+    }
+
+    .ticket-grid {
+        padding: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lightbox-content {
+        width: 95%;
+    }
+
+    #lightbox-close {
+        background-color: #923f34;
+        color: white;
+        width: 20px;
+        height: 20px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+    .ticket-grid {
+        max-width: 85%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .img-grid-1x2, .grid-1x3 {
+        grid-template-columns: 1fr;
+    }
+
+    #gamers-grid-pic-01, #gamepad-grid-pic {
+        height: 600px;
+    }
+
+    .tournament-grid > div:nth-of-type(1) {
+        order: 2;
+    }
+
+    .schedule-grid {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .schedule-grid-headings {
+        margin-top: 1.5rem;
+    }
+
+    .change-order-sm {
+        order: 0 !important;
+    }
+
+    .padding-bottom-sm-0 {
+        padding-bottom: 0;
+    }
+
+    .ticket-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+        justify-self: center;
+    }
+
+    .ticket-price:not(:last-of-type) {
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid white;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weitere-infos-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "ort"
+            "anreise"
+            "logistik";
+    }
+
+    .weitere-infos-grid > .centered-text-container {
+        gap: 0;
+    }
+
+    .personal-data-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .personal-data-input-container > * {
+        margin: auto;
+    }
+
+    .ticket-payment-info-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .kontakt-grid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .kontakt-grid > div:last-of-type {
+        grid-row: span 1;
+    }
+
+    .lightbox-content {
+        width: 90%;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        box-shadow: 6px 6px 6px 6px rgba(0,0,0,.2);
+    }
+
+    .dropdown-menu {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-nav > * {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .navbar-nav > *:last-child {
+        margin: auto;
+        margin-bottom: 0.75rem;
+    }
+
+    .kontakt-item  {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .kontakt-item > p {
+        text-align: center;
+    }
+
+    .img-grid-team-pic {
+        grid-template-columns: 1fr;
+    }
+
+    .img-grid-team-pic > div:last-of-type {
+        order: 0;
+        max-width: 650px;
+        padding-bottom: 0;
+    }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
